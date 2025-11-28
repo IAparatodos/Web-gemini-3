@@ -44,16 +44,16 @@ const App: React.FC = () => {
         
         <Features />
         
-        <section id="courses" className="py-24 bg-gray-50">
+        <section id="courses" className="py-20 bg-gray-50">
           <div className="container mx-auto px-6">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-adria-dark mb-4">Nuestros Cursos</h2>
-              <p className="text-gray-600 max-w-2xl mx-auto">
-                Formación diseñada para tener impacto inmediato. Sin relleno, solo herramientas que funcionan.
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-adria-dark mb-3">Nuestros Cursos</h2>
+              <p className="text-gray-600 max-w-xl mx-auto">
+                Formación práctica en Inteligencia Artificial
               </p>
             </div>
-            
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
               {courses.map(course => (
                 <CourseCard key={course.id} course={course} />
               ))}
@@ -63,47 +63,25 @@ const App: React.FC = () => {
 
         <AiAssistant />
         
-        <section id="contact" className="bg-adria-dark py-20 text-white">
-          <div className="container mx-auto px-6 grid md:grid-cols-2 gap-12">
-            <div>
-              <h2 className="text-3xl font-bold mb-6">¿Listo para el futuro?</h2>
-              <p className="text-gray-300 mb-8 leading-relaxed">
-                Si tienes dudas sobre qué camino tomar o quieres una consultoría personalizada para tu empresa, estamos aquí para escucharte.
-              </p>
-              <div className="space-y-4">
-                <div className="flex items-center gap-4 text-gray-300">
-                  <Mail className="text-adria-primary" />
-                  <span>hola@codigoadria.com</span>
-                </div>
-                <div className="flex items-center gap-4 text-gray-300">
-                  <Phone className="text-adria-primary" />
-                  <span>+34 600 123 456</span>
-                </div>
-                <div className="flex items-center gap-4 text-gray-300">
-                  <MapPin className="text-adria-primary" />
-                  <span>Valencia, España (Mediterráneo Style)</span>
-                </div>
+        <section id="contact" className="bg-adria-dark py-16 text-white">
+          <div className="container mx-auto px-6 text-center">
+            <h2 className="text-3xl font-bold mb-4">Contacto</h2>
+            <p className="text-gray-300 mb-8 max-w-xl mx-auto">
+              ¿Tienes dudas o quieres más información? Contáctanos
+            </p>
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center max-w-3xl mx-auto">
+              <div className="flex items-center gap-3 text-gray-300">
+                <Mail className="text-adria-primary" />
+                <span>hola@codigoadria.com</span>
               </div>
-            </div>
-            
-            <div className="bg-white/5 p-8 rounded-2xl border border-white/10">
-              <form className="space-y-4">
-                <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-1">Nombre</label>
-                  <input type="text" className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-adria-primary transition-colors" placeholder="Tu nombre" />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-1">Email</label>
-                  <input type="email" className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-adria-primary transition-colors" placeholder="tu@email.com" />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-1">Mensaje</label>
-                  <textarea rows={4} className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-adria-primary transition-colors" placeholder="¿En qué podemos ayudarte?"></textarea>
-                </div>
-                <button type="button" className="w-full bg-adria-primary text-adria-dark font-bold py-3 rounded-lg hover:bg-teal-300 transition-colors">
-                  Enviar Mensaje
-                </button>
-              </form>
+              <div className="flex items-center gap-3 text-gray-300">
+                <Phone className="text-adria-primary" />
+                <span>+34 600 123 456</span>
+              </div>
+              <div className="flex items-center gap-3 text-gray-300">
+                <MapPin className="text-adria-primary" />
+                <span>Valencia, España</span>
+              </div>
             </div>
           </div>
         </section>
