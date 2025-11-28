@@ -1,7 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { sendMessageToGemini } from '../services/geminiService';
+import { downloadProveedorPDF } from '../services/pdfService';
 import { ChatMessage } from '../types';
-import { Send, Bot, User, Loader2, Sparkles } from 'lucide-react';
+import { Send, Bot, User, Loader2, Sparkles, FileDown } from 'lucide-react';
 import { Button } from './Button';
 
 export const AiAssistant: React.FC = () => {
@@ -82,18 +83,29 @@ export const AiAssistant: React.FC = () => {
             
             <div className="space-y-4">
               <p className="text-xs uppercase text-gray-400 tracking-wider font-semibold">Sugerencias</p>
-              <button 
+              <button
                 onClick={() => setInput("¿Qué curso es mejor para una tienda online?")}
                 className="block w-full text-left text-sm p-3 rounded bg-white/5 hover:bg-white/10 transition-colors border border-white/10"
               >
                 "¿Qué curso para ecommerce?"
               </button>
-              <button 
+              <button
                  onClick={() => setInput("Explícame qué es la IA generativa")}
                 className="block w-full text-left text-sm p-3 rounded bg-white/5 hover:bg-white/10 transition-colors border border-white/10"
               >
                 "¿Qué es IA generativa?"
               </button>
+
+              <div className="pt-4 border-t border-white/10">
+                <p className="text-xs uppercase text-gray-400 tracking-wider font-semibold mb-3">Recursos</p>
+                <button
+                  onClick={downloadProveedorPDF}
+                  className="flex items-center gap-2 w-full text-left text-sm p-3 rounded bg-adria-primary/20 hover:bg-adria-primary/30 transition-colors border border-adria-primary/30"
+                >
+                  <FileDown size={16} className="text-adria-primary" />
+                  <span>Descargar Instrucciones PDF</span>
+                </button>
+              </div>
             </div>
           </div>
 
