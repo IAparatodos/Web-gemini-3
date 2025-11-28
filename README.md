@@ -10,7 +10,7 @@ View your app in AI Studio: https://ai.studio/apps/drive/1Z3fDTJ0y2Li9_PSZRv0km7
 
 ## 🚀 Ejecutar en Google Colab (Fácil - No requiere instalación local)
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/IAparatodos/Web-gemini-3/blob/claude/fix-pdf-image-sizing-012HXq1ZE91CVMMhq18oPWkk/Run_AdrIA_in_Colab.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/IAparatodos/Web-gemini-3/blob/main/Run_AdrIA_in_Colab.ipynb)
 
 **Haz clic en el botón de arriba** para ejecutar la aplicación completa en Google Colab sin necesidad de instalar nada en tu computadora.
 
