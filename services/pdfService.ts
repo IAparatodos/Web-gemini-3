@@ -117,7 +117,7 @@ const loadImage = (url: string): Promise<HTMLImageElement> => {
  */
 export const downloadProveedorPDF = () => {
   const link = document.createElement('a');
-  link.href = '/Instrucciones proveedor.pdf';
+  link.href = encodeURI('/Instrucciones proveedor.pdf');
   link.download = 'Instrucciones-Montaje-2375.pdf';
   document.body.appendChild(link);
   link.click();
